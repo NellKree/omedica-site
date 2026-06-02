@@ -22,7 +22,7 @@ export function HomePage() {
   const featuredDoctors = doctors.slice(0, 3);
   const { lat, lng } = contacts.coordinates;
   const mapSrc = `https://yandex.ru/map-widget/v1/?ll=${lng}%2C${lat}&pt=${lng}%2C${lat}%2Cpm2rdm&z=17`;
-  const yandexMapUrl = `https://yandex.ru/maps/?ll=${lng}%2C${lat}&pt=${lng}%2C${lat}%2Cpm2rdm&z=17`;
+  const yandexMapUrl = "https://yandex.ru/maps/org/omedika/146061499524/";
 
   return (
     <>

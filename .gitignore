@@ -1,0 +1,12 @@
+.DS_Store
+
+# Local source materials and scraper workspace
+archive/
+omedica_scraper/
+tests/
+/pyproject.toml
+/README.md
+2026-04-22 ОМЕДИКА/
+клиника о медика 21.04.26/
+Логотип Омедика.ai
+*.ai

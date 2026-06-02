@@ -1493,7 +1493,7 @@ img {
 }
 
 .footer-brand .brand-logo.is-inverted .brand-logo__line {
-  background: var(--white);
+  display: none;
 }
 
 .social-links {

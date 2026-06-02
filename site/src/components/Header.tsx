@@ -41,7 +41,7 @@ export function Header({ currentPath }: { currentPath: string }) {
       </div>
 
       <div className="nav-shell">
-        <a className="logo-link" href="#/" aria-label="О'Медика">
+        <a className="logo-link" href="#/" aria-label="ОМЕДИКА">
           <OmedicaLogo />
         </a>
 
@@ -58,13 +58,13 @@ export function Header({ currentPath }: { currentPath: string }) {
         </nav>
 
         <div className="header-actions">
-          <a className="phone-link" href={phoneHref(contacts.phone)}>
+          <div className="phone-link" aria-label="Телефоны медицинского центра">
             <Phone size={18} />
             <span>
-              {contacts.phone}
-              <small>{contacts.secondPhone}</small>
+              <a href={phoneHref(contacts.phone)}>{contacts.phone}</a>
+              <a href={phoneHref(contacts.secondPhone)}>{contacts.secondPhone}</a>
             </span>
-          </a>
+          </div>
           <a className="button button-primary" href="#/appointment">
             Записаться
           </a>

@@ -20,7 +20,7 @@ export const contacts = {
   },
   officialSite: "https://omedica.ru",
   socials: {
-    vk: "https://vk.com/omedicaspb",
+    vk: "https://vk.com/omedica",
     telegram: "https://t.me/omedicaspb",
   },
   legal: {

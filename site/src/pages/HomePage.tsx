@@ -14,6 +14,8 @@ import { ServiceCard } from "../components/ServiceCard";
 import { contacts, doctors, reviewInsights, reviewMetrics, reviewSources, reviewStrengths, services, trustStats } from "../data/content";
 import { assetPath } from "../lib/assets";
 
+const phoneHref = (phone: string) => `tel:+${phone.replace(/\D/g, "")}`;
+
 export function HomePage() {
   const featuredServices = services.slice(0, 4);
   const familyServices = services.slice(2, 6);
@@ -26,11 +28,11 @@ export function HomePage() {
     <>
       <section className="hero">
         <div className="hero-media">
-          <img src={assetPath("/images/clinic-room.webp")} alt="Врач объясняет пациентке план лечения в О'Медика" />
+          <img src={assetPath("/images/clinic-room.webp")} alt="Врач объясняет пациентке план лечения в ОМЕДИКА" />
         </div>
         <div className="hero-copy">
           <span className="eyebrow">Медицинский центр у м. Академическая</span>
-          <h1>О’Медика — клиника для взрослых и детей рядом с домом</h1>
+          <h1>ОМЕДИКА — клиника для взрослых и детей рядом с домом</h1>
           <p>
             Врачи, УЗИ, анализы, женское здоровье, педиатрия и реабилитация в одном медицинском центре на Бутлерова.
           </p>
@@ -197,7 +199,7 @@ export function HomePage() {
           <div className="map-copy">
             <SectionHeader
               eyebrow="Контакты"
-              title="О’Медика на Бутлерова, 9к2"
+              title="ОМЕДИКА на Бутлерова, 9к2"
               text="Клиника находится в Калининском районе, рядом с метро Академическая. На карте отмечена точка у корпуса 9к2."
             />
             <div className="contact-cards">
@@ -220,18 +222,21 @@ export function HomePage() {
               </div>
               <div>
                 <Phone size={20} />
-                <span>{contacts.phone}</span>
-                <small>{contacts.secondPhone}</small>
+                <span>
+                  <a href={phoneHref(contacts.phone)}>{contacts.phone}</a>
+                  <a href={phoneHref(contacts.secondPhone)}>{contacts.secondPhone}</a>
+                </span>
+                <small>Нажмите на номер, чтобы позвонить</small>
               </div>
             </div>
             <a className="button button-secondary" href={yandexMapUrl} target="_blank" rel="noreferrer">
               Открыть в Яндекс Картах
             </a>
           </div>
-          <div className="map-frame" aria-label="Карта проезда к медицинскому центру О'Медика">
+          <div className="map-frame" aria-label="Карта проезда к медицинскому центру ОМЕДИКА">
             <iframe
               src={mapSrc}
-              title="О'Медика на карте"
+              title="ОМЕДИКА на карте"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
@@ -240,7 +245,7 @@ export function HomePage() {
                 <MapPin size={22} />
               </span>
               <span>
-                <strong>О’Медика</strong>
+                <strong>ОМЕДИКА</strong>
                 <small>ул. Бутлерова, 9к2</small>
               </span>
             </a>

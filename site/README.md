@@ -1,4 +1,4 @@
-# О'Медика site
+# ОМЕДИКА site
 
 React/Vite website for a GitHub Pages-ready medical center website.
 

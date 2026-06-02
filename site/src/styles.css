@@ -1492,6 +1492,10 @@ img {
   display: none;
 }
 
+.footer-brand .brand-logo__line {
+  background: var(--white);
+}
+
 .social-links {
   display: flex;
   flex-wrap: wrap;

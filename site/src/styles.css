@@ -1488,6 +1488,10 @@ img {
   margin-bottom: 18px;
 }
 
+.footer-brand .brand-logo__caption {
+  display: none;
+}
+
 .social-links {
   display: flex;
   flex-wrap: wrap;
